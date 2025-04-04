@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productivity</title>
+    <title>War against Addiction</title>
     <style>
         body {
             font-family: Comic Sans MS, sans-serif;
@@ -16,22 +16,7 @@
             padding: 20px;
             background-color: #f5f5f5;
         }
-        
-        h1 {
-            margin-bottom: 30px;
-            color: #333;
-        }
-        
-        .bar-container {
-            width: 100%;
-            max-width: 400px;
-            margin-bottom: 25px;
-            background: #F5DEB3;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
+
         .bar-container:hover 
         {
             transform: translateY(-10px);
@@ -42,6 +27,23 @@
             transform: scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
+        
+        h1 {
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .bar-container {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 25px;
+            background: #F5DEB3;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        
         .bar-title {
             margin-bottom: 10px;
             font-weight: bold;
@@ -55,7 +57,7 @@
             margin-bottom: 15px;
             display: flex;
             background: #f9f9f9;
-            overflow: hidden; 
+            overflow: hidden;
         }
         
         .progress-block {
@@ -66,6 +68,11 @@
             display: none;
         }
         
+        .button-group {
+            display: flex;
+            gap: 10px;
+        }
+        
         .add-button {
             padding: 8px 16px;
             font-size: 14px;
@@ -74,24 +81,46 @@
             border: none;
             border-radius: 4px;
             cursor: pointer;
-            width: 100%;
+            flex: 1;
             transition: background-color 0.3s;
         }
         
         .add-button:hover {
-            background-color: #2E8B57;
+            background-color: #45a049;
         }
         
         .add-button:disabled {
             background-color: #cccccc;
             cursor: not-allowed;
         }
-
+        
+        .decrease-button {
+            padding: 8px 16px;
+            font-size: 14px;
+            background-color: #f44336;
+            color: #F5DEB3;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            flex: 1;
+            transition: background-color 0.3s;
+        }
+        
+        .decrease-button:hover {
+            background-color: #d32f2f;
+        }
+        
+        .decrease-button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        
         .reset-all-button:hover {
             background-color: darkblue;
-            color: white;
+            color: #F5DEB3;
         }
-        .reset-all-button{
+        .reset-all-button
+        {
             font-family: Comic Sans MS, sans-serif;
             padding: 8px 16px;
             background-color: palevioletred;
@@ -101,51 +130,47 @@
             border-radius: 4px;
             cursor: pointer;
             width: 20%;
-            transition: background-color 0.3s;
-
-        @media only screen and (max-width: 450px)
-        {
-            width: 30%;
-            font-size: 12px;
-        }
-        }
+            transition: background-color 0.3s;}
     </style>
 </head>
 <body>
-    <h1>Battle Against Addiction</h1>
+    <h1>War against Addiction</h1>
     
     <!-- Bar 1 -->
     <div class="bar-container">
-        <div class="bar-title">Youtube class (60 Hour)</div>
+        <div class="bar-title">Class (60 hours)</div>
         <div class="progress-container" id="progressContainer1">
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-            <div class="progress-block"></div>
-
+            <!-- 20 blocks (5% each) -->
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
+            <div class="progress-block"></div><div class="progress-block"></div>
         </div>
-        <button class="add-button" id="progressButton1">Add Progress</button>
+        <div class="button-group">
+            <button class="add-button" id="progressButton1">Add</button>
+            <button class="decrease-button" id="decreaseButton1">Reduce</button>
+        </div>
     </div>
     
     <!-- Bar 2 -->
     <div class="bar-container">
-        <div class="bar-title">chrome use (200 min)</div>
+        <div class="bar-title">Chrome (200 min)</div>
         <div class="progress-container" id="progressContainer2">
             <div class="progress-block"  style="background-color: #8B0000;"></div>
             <div class="progress-block"  style="background-color: #8B0000;"></div>
@@ -167,16 +192,19 @@
             <div class="progress-block"  style="background-color: #8B0000;"></div>
             <div class="progress-block"  style="background-color: #8B0000;"></div>
             <div class="progress-block"  style="background-color: #8B0000;"></div>
-
             
         </div>
-        <button class="add-button" id="progressButton2" style="background-color: #8B0000;">Add Amount</button>
+        <div class="button-group">
+            <button class="add-button" id="progressButton2" style="background-color: #8B0000;">Add</button>
+            <button class="decrease-button" id="decreaseButton2" style="background-color: #2E8B57;">Reduce</button>
+        </div>
     </div>
     
     <!-- Bar 3 -->
     <div class="bar-container">
-        <div class="bar-title">phone use(20 hours)</div>
+        <div class="bar-title">Phone (20 hours)</div>
         <div class="progress-container" id="progressContainer3">
+            
             <div class="progress-block"  style="background-color: #8B0000;"></div>
             <div class="progress-block"  style="background-color: #8B0000;"></div>
             <div class="progress-block"  style="background-color: #8B0000;"></div>
@@ -197,18 +225,18 @@
             <div class="progress-block"  style="background-color: #8B0000;"></div>
             <div class="progress-block"  style="background-color: #8B0000;"></div>
             <div class="progress-block"  style="background-color: #8B0000;"></div>
-
         </div>
-        <button class="add-button" id="progressButton3" style="background-color: #8B0000;">Add Amount</button>
+        <div class="button-group">
+            <button class="add-button" id="progressButton3" style="background-color: #8B0000;">Add</button>
+            <button class="decrease-button" id="decreaseButton3" style="background-color: #2E8B57;">Reduce</button>
+        </div>
     </div>
-
-    <button class="reset-all-button" id="resetAllButton" >Reset All Progress</button>
     
+    <!-- Reset All Button -->
+    <button class="reset-all-button" id="resetAllButton">Reset All Progress</button>
 
-
-
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
             // Function to save progress to localStorage
             function saveProgress(barId, progress) {
                 localStorage.setItem(`progress_${barId}`, progress);
@@ -219,73 +247,80 @@
                 return parseInt(localStorage.getItem(`progress_${barId}`)) || 0;
             }
             
-            // Function to reset a specific progress bar
-            function resetProgressBar(containerId, buttonId, barId) {
-                const progressButton = document.getElementById(buttonId);
-                const progressBlocks = document.querySelectorAll(`#${containerId} .progress-block`);
+            // Function to update button states
+            function updateButtonStates(buttonId, decreaseId, currentProgress, maxProgress) {
+                const addButton = document.getElementById(buttonId);
+                const decreaseButton = document.getElementById(decreaseId);
                 
-                // Reset visual progress
-                progressBlocks.forEach(block => {
-                    block.style.display = 'none';
-                });
+                addButton.disabled = currentProgress >= maxProgress;
+                decreaseButton.disabled = currentProgress <= 0;
                 
-                // Reset button state
-                progressButton.disabled = false;
-                progressButton.textContent = 'Add Progress';
-                
-                // Clear from storage
-                localStorage.removeItem(`progress_${barId}`);
+                if (currentProgress >= maxProgress) {
+                    addButton.textContent = 'Completed!';
+                } else {
+                    addButton.textContent = 'Add';
+                }
             }
             
-            // Function to setup a progress bar with its button
-            function setupProgressBar(containerId, buttonId) {
+            // Function to setup a progress bar with its buttons
+            function setupProgressBar(containerId, buttonId, decreaseId, barId) {
                 const progressButton = document.getElementById(buttonId);
+                const decreaseButton = document.getElementById(decreaseId);
                 const progressBlocks = document.querySelectorAll(`#${containerId} .progress-block`);
-                const barId = containerId.replace('progressContainer', '');
                 let currentProgress = loadProgress(barId);
                 
                 // Load saved progress on page load
                 for (let i = 0; i < currentProgress; i++) {
-                    progressBlocks[i].style.display = 'block';
+                    if (progressBlocks[i]) {
+                        progressBlocks[i].style.display = 'block';
+                    }
                 }
                 
-                // Update button state if already completed
-                if (currentProgress === progressBlocks.length) {
-                    progressButton.disabled = true;
-                    progressButton.textContent = 'Completed!';
-                }
+                // Update initial button states
+                updateButtonStates(buttonId, decreaseId, currentProgress, progressBlocks.length);
                 
+                // Add progress
                 progressButton.addEventListener('click', function() {
                     if (currentProgress < progressBlocks.length) {
                         progressBlocks[currentProgress].style.display = 'block';
                         currentProgress++;
                         saveProgress(barId, currentProgress);
-                        
-                        if (currentProgress === progressBlocks.length) {
-                            progressButton.disabled = true;
-                            progressButton.textContent = 'Completed!';
-                        }
+                        updateButtonStates(buttonId, decreaseId, currentProgress, progressBlocks.length);
                     }
                 });
                 
-                return { containerId, buttonId, barId };
+                // Decrease progress
+                decreaseButton.addEventListener('click', function() {
+                    if (currentProgress > 0) {
+                        currentProgress--;
+                        progressBlocks[currentProgress].style.display = 'none';
+                        saveProgress(barId, currentProgress);
+                        updateButtonStates(buttonId, decreaseId, currentProgress, progressBlocks.length);
+                    }
+                });
+                
+                return { containerId, buttonId, decreaseId, barId };
             }
             
             // Setup all three progress bars and store their info
             const bars = [
-                setupProgressBar('progressContainer1', 'progressButton1'),
-                setupProgressBar('progressContainer2', 'progressButton2'),
-                setupProgressBar('progressContainer3', 'progressButton3')
+                setupProgressBar('progressContainer1', 'progressButton1', 'decreaseButton1', '1'),
+                setupProgressBar('progressContainer2', 'progressButton2', 'decreaseButton2', '2'),
+                setupProgressBar('progressContainer3', 'progressButton3', 'decreaseButton3', '3')
             ];
             
             // Setup reset all button
             document.getElementById('resetAllButton').addEventListener('click', function() {
                 bars.forEach(bar => {
-                    resetProgressBar(bar.containerId, bar.buttonId, bar.barId);
+                    const progressBlocks = document.querySelectorAll(`#${bar.containerId} .progress-block`);
+                    progressBlocks.forEach(block => {
+                        block.style.display = 'none';
+                    });
+                    saveProgress(bar.barId, 0);
+                    updateButtonStates(bar.buttonId, bar.decreaseId, 0, progressBlocks.length);
                 });
             });
         });
-</script>
-
+    </script>
 </body>
 </html>
